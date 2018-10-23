@@ -2,9 +2,9 @@ import React from "react"
 import ReactDOM from "react-dom";
 import Recipe from "./Recipe";
 
-import { recipe } from "./staticData"
+import { recipes } from "./staticData"
 
-const mapedRecipe = recipe.map(
+const mapedRecipe = recipes.map(
   (recipe) => <Recipe title={recipe.title} description={recipe.description} />
 );
 

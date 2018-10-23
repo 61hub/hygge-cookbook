@@ -1,4 +1,4 @@
-export const recipe = [
+export const recipes = [
   {
     title: "Картошка",
     description: "Духовку нагреть до 200°С. Картофель вымыть и обсушить бумажным полотенцем."
