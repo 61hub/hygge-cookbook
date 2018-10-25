@@ -34,7 +34,7 @@ class RecipeForm extends Component {
       description: this.state.description
     };
     console.log(formData);
-    localStorage.setItem("formData", JSON.stringify(formData));
+    this.props.saveToLs(formData);
     this.setState({
       title: "",
       description: ""
@@ -47,13 +47,15 @@ class RecipeForm extends Component {
         <form id="recipeForm" onSubmit={this.pushDataToLS}>
           <input type="text"
                  value={this.state.title}
-                 onChange={this.handleChangeTitle}>
+                 onChange={this.handleChangeTitle}
+                 placeholder="Название рецепта">
 
           </input>
           <textarea value={this.state.description}
                     onChange={this.handleChangeDescription}
                     rows="5"
-                    cols="60">
+                    cols="60"
+                    placeholder="Описание рецепта">
 
           </textarea>
           <button>Add recipe</button>
